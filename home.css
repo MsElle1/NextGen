@@ -1,0 +1,250 @@
+@import url('https://fonts.google.com/specimen/Yesteryear?categoryFilters=Feeling:%2FExpressive%2FFancy');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+  }
+  /* Medium screens (tablet) */
+  @media (max-width: 992px) {
+    body {
+      font-size: 16px;
+      background-color: #f0f0f0;
+    }
+  }
+  
+  /* Small screens (mobile) */
+  @media (max-width: 600px) {
+    body {
+      font-size: 14px;
+      background-color: #e0f7fa;
+    }
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(to right, #6aaedb, #639fca);
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo-text {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-family: 'Yesteryear', cursive;
+    color: white;
+    font-weight: bold;
+    gap: 5px; /* spacing between image and text */
+  }
+  
+  .logo1 {
+    width: 28px;
+    height: 28px;
+    margin-top: 2px; /* fine-tune vertical alignment */
+  }
+  /* Navigation */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  nav a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  nav a:hover {
+    transform: scale(1.02);
+    color: blue;
+  }
+  .signin-btn {
+    padding: 8px 16px;
+    background: #0d6efd;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  .signin-btn:hover {
+    background: #084fcb;
+  }
+  .sidebar {
+    background: linear-gradient(rgba(0, 39, 78, 0.7), rgba(0, 39, 78, 0.7)), url('https://unsplash.com/photos/a-large-brick-building-with-a-clock-on-the-top-of-it-n-X-wE-h4e8'); /* Use a high-quality, less distracting background image */
+    background-size:auto;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 10rem 5%;
+}
+
+.side-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sidebar h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.sidebar h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.cta-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.cta-btn {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-btn.primary {
+    background: #e67e22;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(201, 200, 200, 0.4);
+}
+
+.cta-btn.secondary {
+    background:#e67e22;
+    color: #eff0f1;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Info Cards Section */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 5%;
+    margin-top: -6rem; 
+    position: relative;
+    z-index: 10;
+}
+
+.card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #0a4f91;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+.card p{
+  color: #333;
+}
+
+.card-link {
+    display: inline-block;
+    color: #e67e22;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: color 0.3s;
+}
+
+.card-link:hover {
+    color: #d35400;
+}
+
+.news-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-card li {
+    border-bottom: 1px solid #eee;
+    padding: 0.8rem 0;
+}
+
+.news-card li:last-child {
+    border-bottom: none;
+}
+.news-card li strong {
+  color: #333;
+}
+/* Centered Visit Button */
+.visit-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: white;
+  color: #1a4bd0;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: background 0.3s;
+  margin: 0;
+}
+
+.visit-btn:hover {
+  background: #f0f4ff;
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 5%;
+  color: #777;
+  background: #e9ecef;
+  
+}

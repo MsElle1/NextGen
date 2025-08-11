@@ -1,0 +1,84 @@
+@import url('https://fonts.google.com/specimen/Yesteryear?categoryFilters=Feeling:%2FExpressive%2FFancy');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(to right, #6aaedb, #639fca);
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo-text {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-family: 'Yesteryear', cursive;
+    color: white;
+    font-weight: bold;
+    gap: 5px; /* spacing between image and text */
+  }
+  
+  .logo1 {
+    width: 28px;
+    height: 28px;
+    margin-top: 2px; /* fine-tune vertical alignment */
+  }
+  /* Navigation */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  nav a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  nav a:hover {
+    transform: scale(1.02);
+    color: blue;
+  }
+  .signin-btn {
+    padding: 8px 16px;
+    background: #0d6efd;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  .signin-btn:hover {
+    background: #084fcb;
+  }

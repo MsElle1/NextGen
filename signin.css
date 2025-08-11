@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-image: url('https://atamerica.or.id/wp-content/uploads/2025/03/harvard-university-cambridge-usa.webp');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; 
+    border-radius: 12px;
+    position: relative;
+    border: 1px solid white; 
+    text-align: center; }
+
+h2 {
+    color: rgb(35, 143, 238); 
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left; 
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: rgb(35, 143, 238); 
+    font-size: 16px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border: 1px solid rgb(35, 143, 238); 
+    border-radius: 8px;
+    background-color: white; 
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box; 
+}
+
+.input-group input:focus {
+    outline: none;
+    background-color: #fff;
+}
+
+.login-btn, .register-btn {
+    width: 100%;
+    padding: 14px;
+    background-color:rgb(35, 143, 238);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.login-btn:hover, .register-btn:hover {
+    background-color: #9ec7e4;
+}
+.register-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+.register-text a {
+    color: #d06e7e; /* Soft pink link color */
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #f1c6d8;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #d06e7e;
+    text-decoration: none;
+    cursor: pointer;
+}
+
