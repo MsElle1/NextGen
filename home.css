@@ -85,19 +85,24 @@
     transform: scale(1.02);
     color: blue;
   }
-  .signin-btn {
-    padding: 8px 16px;
-    background: #0d6efd;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  }
-  
-  .signin-btn:hover {
-    background: #084fcb;
-  }
+/* Styles for Sign In and Sign Out buttons */
+.signin-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.signin-btn:hover {
+  background-color: #0056b3;
+}
+
   .sidebar {
     background: linear-gradient(rgba(0, 39, 78, 0.7), rgba(0, 39, 78, 0.7)), url('https://unsplash.com/photos/a-large-brick-building-with-a-clock-on-the-top-of-it-n-X-wE-h4e8'); /* Use a high-quality, less distracting background image */
     background-size:auto;

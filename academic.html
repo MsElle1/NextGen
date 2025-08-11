@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NewGen University - Academic</title>
+  <title>NextGen University - Academic</title>
   <link rel="stylesheet" href="academic.css">
   <link rel="stylesheet" href="newgen-academic-css">
 </head>
@@ -11,25 +11,24 @@
 
  <!-- Header Navigation -->
  <header>
-    <div class="nav-container">
-      <div class="logo"> 
-        <span class="logo-text">
+  <div class="container">
+    <div class="logo"> 
+      <span class="logo-text">
           NextGen 
           <img src="https://img.icons8.com/?size=100&id=1538&format=png&color=000000" alt="Graduation Cap" class="logo1" />
-        </span>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="academic.html">Academic</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-      </nav>
-      <a href="signin.html" class="signin-btn">Sign In</a>
+      </span>
     </div>
-  </header>
-
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="academic.html">Academic</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="signin.html" class="signin-btn">Sign In</a>
+  </div>
+</header>
   <main>
     <!-- Programs Section -->
     <section>
@@ -129,5 +128,33 @@
         <p>&copy; 2025 NextGen University. All rights reserved.</p>
     </div>
 </footer>
+<script>
+  // Check if user is logged in
+  fetch('check_session.php')
+      .then(response => response.json())
+      .then(data => {
+          const signinLink = document.getElementById('signin-link');
+          const userMenu = document.getElementById('user-menu');
+          const welcomeText = document.getElementById('welcome-text');
+          
+          if (data.loggedIn) {
+              // User is logged in, show user menu
+              signinLink.style.display = 'none';
+              userMenu.style.display = 'block';
+              welcomeText.textContent = `Welcome, ${data.username}!`;
+          } else {
+              // User is not logged in, show signin link
+              signinLink.style.display = 'block';
+              userMenu.style.display = 'none';
+          }
+      })
+      .catch(error => {
+          console.log('Session check failed:', error);
+          // If session check fails, assume not logged in
+          document.getElementById('signin-link').style.display = 'block';
+          document.getElementById('user-menu').style.display = 'none';
+      });
+</script>
+<script src="auth.js"></script>
 </body>
 </html>

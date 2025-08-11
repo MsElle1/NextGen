@@ -1,90 +1,106 @@
 @import url('https://fonts.google.com/specimen/Yesteryear?categoryFilters=Feeling:%2FExpressive%2FFancy');
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
     font-family: Arial, sans-serif;
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top center;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    font-size: 18px;
+  }
+  /* Medium screens (tablet) */
+  @media (max-width: 992px) {
+    body {
+      font-size: 16px;
+      background-color: #f0f0f0;
+    }
   }
   
-
-/* ======== Header Navigation ======== */
-header {
+  /* Small screens (mobile) */
+  @media (max-width: 600px) {
+    body {
+      font-size: 14px;
+      background-color: #e0f7fa;
+    }
+  }
+  
+  /* Header */
+  header {
     background: linear-gradient(to right, #6aaedb, #639fca);
     padding: 20px 0;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
   }
-
-.nav-container {
+  .container {
     max-width: 1200px;
     margin: auto;
     padding: 0 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo-text {
-    font-family: 'Yesteryear', cursive;
-    font-size: 1.8rem;
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-weight: bold;
   }
-
-.logo1 {
-  width: 28px;
-  height: 28px;
-  margin-top: 2px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-nav ul li a {
-  color: white;
-  font-size: 18px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-nav ul li a:hover {
-  color: blue;
-  transform: scale(1.05);
-}
-
+  
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo-text {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-family: 'Yesteryear', cursive;
+    color: white;
+    font-weight: bold;
+    gap: 5px; /* spacing between image and text */
+  }
+  
+  .logo1 {
+    width: 28px;
+    height: 28px;
+    margin-top: 2px; /* fine-tune vertical alignment */
+  }
+  /* Navigation */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  nav a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  nav a:hover {
+    transform: scale(1.02);
+    color: blue;
+  }
+/* Styles for Sign In and Sign Out buttons */
 .signin-btn {
-  padding: 8px 16px;
-  background: #0d6efd;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
   color: white;
-  border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
   transition: background 0.3s ease;
 }
 
 .signin-btn:hover {
-  background: #084fcb;
+  background-color: #0056b3;
 }
 /* ======== Contact Section ======== */
 .contact-section {
@@ -230,6 +246,6 @@ footer {
   padding: 2rem 5%;
   color: #777;
   background: #e9ecef;
-  margin-top: 100px;
+  margin-top: 150px;
   
 }

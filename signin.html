@@ -25,16 +25,29 @@
         </form>
     </div>
     <script>
-    </script>
-<script>
     document.addEventListener('DOMContentLoaded', () => {
         const urlParams = new URLSearchParams(window.location.search);
         const error = urlParams.get('error');
         const loginMessage = document.getElementById('loginMessage');
 
-        if (error === 'invalid_credentials') {
-            loginMessage.textContent = 'Invalid username or password.';
+        if (error) {
             loginMessage.style.color = 'red';
+            loginMessage.style.marginTop = '10px';
+            loginMessage.style.fontSize = '14px';
+            
+            switch(error) {
+                case 'invalid_credentials':
+                    loginMessage.textContent = 'Invalid username or password. Please try again.';
+                    break;
+                case 'database_error':
+                    loginMessage.textContent = 'Database connection error. Please try again later.';
+                    break;
+                case 'missing_fields':
+                    loginMessage.textContent = 'Please enter both username and password.';
+                    break;
+                default:
+                    loginMessage.textContent = 'An error occurred. Please try again.';
+            }
         }
     });
 </script>

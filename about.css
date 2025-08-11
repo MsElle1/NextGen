@@ -11,6 +11,22 @@
     background-position: top center;
     justify-content: center;
     align-items: center;
+    font-size: 18px;
+  }
+  /* Medium screens (tablet) */
+  @media (max-width: 992px) {
+    body {
+      font-size: 16px;
+      background-color: #f0f0f0;
+    }
+  }
+  
+  /* Small screens (mobile) */
+  @media (max-width: 600px) {
+    body {
+      font-size: 14px;
+      background-color: #e0f7fa;
+    }
   }
   
   /* Header */
@@ -69,19 +85,23 @@
     transform: scale(1.02);
     color: blue;
   }
-  .signin-btn {
-    padding: 8px 16px;
-    background: #0d6efd;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  }
-  
-  .signin-btn:hover {
-    background: #084fcb;
-  }
+/* Styles for Sign In and Sign Out buttons */
+.signin-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.signin-btn:hover {
+  background-color: #0056b3;
+}
 /* About Card Section */
 
 main {
